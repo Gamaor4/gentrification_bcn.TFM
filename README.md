@@ -11,11 +11,14 @@ La font de les dades és: https://portaldades.ajuntament.barcelona.cat/ca/
 
 Per a les dades en concret, les pàgines web són:
 - Preu mitjà (€) del lloguer d'habitatges: https://portaldades.ajuntament.barcelona.cat/ca/estad%C3%ADstiques/b37xv8wcjh
+
 - Edat mitjana de la població segons nacionalitat (Espanya - UE - Resta del món): https://portaldades.ajuntament.barcelona.cat/ca/estad%C3%ADstiques/te8dlihpxo
 - Població per nacionalitat (Espanya - UE - Resta del món): https://portaldades.ajuntament.barcelona.cat/ca/estad%C3%ADstiques/zkai27y5wu
 - Població de 16 anys i més per titulació acadèmica i nacionalitat (Espanya - UE - Resta del món): https://portaldades.ajuntament.barcelona.cat/ca/estad%C3%ADstiques/xnbrptprct
 - Nombre d'habitatges d'ús turístic: https://portaldades.ajuntament.barcelona.cat/ca/estad%C3%ADstiques/z1wuyvykvf
 
+![gent barri](https://github.com/Gamaor4/gentrification_bcn.TFM/assets/150432861/322bdc1d-d575-4ec4-a21e-c101d5413511)
+
 Es pot accedir a l'aplicació shiny que permet veure l'evolució al llarg dels anys de cada variable sobre el mapa: https://omartinezgarciauoc.shinyapps.io/gentrifications/
 
-![gent barri](https://github.com/Gamaor4/gentrification_bcn.TFM/assets/150432861/322bdc1d-d575-4ec4-a21e-c101d5413511)
+![shinyapp](https://github.com/Gamaor4/gentrification_bcn.TFM/assets/150432861/74cc2b36-b85f-4fef-9701-cd5a99402950)

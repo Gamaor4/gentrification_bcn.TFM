@@ -17,3 +17,5 @@ Per a les dades en concret, les pàgines web són:
 - Nombre d'habitatges d'ús turístic: https://portaldades.ajuntament.barcelona.cat/ca/estad%C3%ADstiques/z1wuyvykvf
 
 Es pot accedir a l'aplicació shiny que permet veure l'evolució al llarg dels anys de cada variable sobre el mapa: https://omartinezgarciauoc.shinyapps.io/gentrifications/
+
+![gent barri](https://github.com/Gamaor4/gentrification_bcn.TFM/assets/150432861/322bdc1d-d575-4ec4-a21e-c101d5413511)

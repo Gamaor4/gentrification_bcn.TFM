@@ -1,3 +1,12 @@
+#
+# This is a Shiny web application. You can run the application by clicking
+# the 'Run App' button above.
+#
+# Find out more about building applications with Shiny here:
+#
+#    https://shiny.posit.co/
+#
+
 # Llibreries
 
 library(readr)
@@ -52,7 +61,8 @@ bcn_districte <- bcn_districte %>%
   mutate(territori = tolower(NOM),
          territori = iconv(territori, "UTF-8", "ASCII//TRANSLIT"))
 
-set.seed(33)
+set.seed(123)
+
 #preu lloguer
 pmll2 <- pmll %>%
   rename_all(tolower) %>%
@@ -215,6 +225,7 @@ m.df <- left_join(x = emn2, y = pmll2, by = c("territori", "tipus_de_territori",
 m.df.districte <- m.df %>%
   subset(tipus_de_territori == "districte")  %>%
   select(-c("tipus_de_territori"))
+
 m.df.districte2 <- m.df.districte %>% 
   mutate(id = str_c(territori, anys, sep = "_")) %>%
   mutate_all(function(x) {
@@ -224,10 +235,12 @@ m.df.districte2 <- m.df.districte %>%
     return(x)
   }) %>%
   mutate(across(where(is.numeric), scale))
+
 mDF_d <- m.df.districte2 %>%
   select(!c("territori", "anys")) %>%
   column_to_rownames("id")  %>%
   as.matrix()
+
 km_res <- kmeans(mDF_d, centers = 3, nstart = 25)
 districte <- data.frame(m.df.districte[, c("territori", "anys")], cluster = km_res$cluster)
 
@@ -237,6 +250,7 @@ mapbcn.d <-  left_join(x = districte, y = bcn_districte, by = c("territori"))
 m.df.barri <- m.df %>%
   subset(tipus_de_territori == "barri")  %>%
   select(-c("tipus_de_territori"))
+
 m.df.barri2 <- m.df.barri %>% 
   mutate(id = str_c(territori, anys, sep = "_")) %>%
   mutate_all(function(x) {
@@ -246,21 +260,20 @@ m.df.barri2 <- m.df.barri %>%
     return(x)
   }) %>%
   mutate(across(where(is.numeric), scale))
+
 mDF_b <- m.df.barri2 %>%
   select(!c("territori", "anys")) %>%
   column_to_rownames("id")  %>%
   as.matrix()
+
 km_res.b <- kmeans(mDF_b, centers = 3, nstart = 25)
 
 barri <- data.frame(m.df.barri[, c("territori", "anys")], cluster = km_res.b$cluster)
 
 mapbcn <-  left_join(x = barri, y = bcn_barri, by = c("territori"))
 
-
-
 #Shiny
 
-# Calculate the global minimum and maximum values for relevant datasets
 global_min_preu_mitja_lloguer <- min(llmap$preu_mitja_lloguer, na.rm = TRUE)
 global_max_preu_mitja_lloguer <- max(llmap$preu_mitja_lloguer, na.rm = TRUE)
 
@@ -447,7 +460,7 @@ server <- function(input, output, session) {
     
     b <- ggplot() +
       geom_sf(data = cb$geometry, aes(fill = factor(cb$cluster))) +
-      scale_fill_manual(values = c("1" = "yellow", "2" = "green", "3" = "red"), name = "Gentrificació Barris") +
+      scale_fill_manual(values = c("1" = "green", "2" = "red", "3" = "yellow"), name = "Gentrificació Barris") +
       theme_minimal() +
       theme(
         axis.line = element_blank(),
@@ -465,7 +478,7 @@ server <- function(input, output, session) {
     
     d <- ggplot() +
       geom_sf(data = cd$geometry, aes(fill = factor(cd$cluster))) +
-      scale_fill_manual(values = c("1" = "red", "2" = "green", "3" = "yellow"), name = "Gentrificació Districtes") +
+      scale_fill_manual(values = c("1" = "green", "2" = "yellow", "3" = "red"), name = "Gentrificació Districtes") +
       theme_minimal() +
       theme(
         axis.line = element_blank(),
@@ -477,7 +490,6 @@ server <- function(input, output, session) {
     
     ggplotly(d)
   })
-  
 }
 
 # Run the app

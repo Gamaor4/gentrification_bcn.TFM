@@ -1672,31 +1672,3 @@ accuracy <- conf_matrix$overall['Accuracy']
 print(paste("Accuracy:", accuracy))
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

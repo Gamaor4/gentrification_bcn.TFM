@@ -7,6 +7,8 @@
 #    https://shiny.posit.co/
 #
 
+#Codi per executar l'aplicació shiny de gentrificació de Barcelona.
+
 # Llibreries
 
 library(readr)

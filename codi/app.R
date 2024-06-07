@@ -6,6 +6,9 @@
 #
 #    https://shiny.posit.co/
 #
+
+#Codi per executar l'aplicació shiny de visualització de variables de barris de Barcelona.
+
 library(readr)
 library(tidyr)
 library(dplyr)

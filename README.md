@@ -22,3 +22,8 @@ Per a les dades en concret, les pàgines web són:
 Es pot accedir a l'aplicació shiny que permet veure l'evolució al llarg dels anys de cada variable sobre el mapa: https://omartinezgarciauoc.shinyapps.io/gentrifications/
 
 ![shinyapp](https://github.com/Gamaor4/gentrification_bcn.TFM/assets/150432861/74cc2b36-b85f-4fef-9701-cd5a99402950)
+
+Es pot accedir a l'anàlisi de les variables utilitzades de forma interactiva en l'enllaç: https://omartinezgarciauoc.shinyapps.io/Interactive_graphs_bcn/
+
+![imatge](https://github.com/Gamaor4/gentrification_bcn.TFM/assets/150432861/7d300ced-a8e1-4b7d-aa7d-e3653159bb23)
+

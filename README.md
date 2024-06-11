@@ -3,8 +3,8 @@
 El repositori github disposa de les dades i codi per poder dur a terme un estudi sobre diverses variables que poden servir per entendre l'efecte gentrificador que pateix la ciutat de Barcelona.
 
 En aquest repositori hi ha:
-- Codi: Tot el codi utilitzat per tractar les dades en brut des de l'origen. Es pot trobar el codi en Rmarkdown, el codi de l'aplicació shiny per veure l'evolució del procés gentrificador de Barcelona, el codi de l'aplicació shiny per veure les variables de cada barri de forma interactiva i el fitxer html del codi en Rmd per descarregar.
-- Raw_Data: Fitxers .zip amb les dades originals. El codi generat està preparat per treballar des d'aquestes dades.
+- Codi: Codi utilitzat per tractar les dades en brut des de l'origen. Es pot trobar el codi en Rmarkdown, el codi de l'aplicació shiny per veure l'evolució del procés gentrificador de Barcelona, el codi de l'aplicació shiny per veure les variables de cada barri de forma interactiva i el fitxer html del codi en Rmd per descarregar.
+- Raw_Data: Fitxers .zip amb les dades originals. El codi generat està preparat per treballar a partir d'aquestes dades.
 - Dades: Taules en format csv amb les dades netes per poder treballar directament amb elles.
 - Gràfiques: Compilació de documents html per descarregar de forma individual per barri i poder interactuar amb la gràfica. La visualització és de totes les variables per cada barri. -> L'aplicació shiny permet fer el mateix però sense haver de descarregar de forma individual les gràfiques.
 
